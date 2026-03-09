@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     background-color: #f5f5f5;
     display: flex;
     justify-content: center;
@@ -17,7 +17,7 @@ body {
 .cards-container {
     display: flex;
     flex-direction: row;
-    gap: 32px;
+    gap: 8px;
     flex-wrap: nowrap;
     justify-content: center;
     align-items: flex-start;
@@ -25,34 +25,45 @@ body {
 
 .card {
     background-color: #f2f1ed;
-    border-radius: 12px;
+    border-radius: 8px;
     padding: 16px;
     width: 320px;
-    min-height: 400px;
+    height: 400px;
+    overflow-y: auto;
     flex-shrink: 0;
+
+    display: flex;          /* NEW */
+    flex-direction: column; /* NEW */
+}
+
+.card:hover {
+    background-color: #edece7;
 }
 
 .card-title {
     font-size: 32px;
-    font-weight: 600;
+    font-weight: 400;
     color: #333;
     margin-bottom: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .card-price {
     font-size: 20px;
     color: #666;
-    margin-bottom: 24px;
 }
 
 .card-content {
     margin-bottom: 32px;
+    flex: 1; /* NEW: pushes the button to the bottom */
 }
 
 .includes-text {
     font-size: 16px;
     color: #333;
-    margin-bottom: 16px;
+    margin: 24px 0px;
 }
 
 .features-list {
@@ -94,4 +105,26 @@ body {
 
 .download-button:active {
     background-color: #D8D6CE;
+}
+
+h1 .recommended-badge {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(245, 78, 0);
+}
+
+.download-button--pro-plus {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.download-button--pro-plus:hover {
+    background-color: #373737;
+}
+
+h3 {
+h3 {
+    font-size: 24px;
+    line-height: 28px;
+    color: #262518;
 }
